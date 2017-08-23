@@ -1,0 +1,32 @@
+.social-list {
+   display: flex;
+   margin-top: rem(25px);
+   margin-bottom: rem(25px);
+
+   @include mq(tablet) {
+      transform: rotate(-7deg);
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+
+   &__item {
+      width: 56px;
+      margin-right: .25rem;
+      opacity: .7;
+      transition: transform .4s;
+
+      @include mq(tablet) {
+         max-width: 50px;
+      }
+
+      &:hover {
+         transform: rotate(1turn) scale(1.1);
+         opacity: .8;
+      }
+
+      a {
+         display: block;
+         padding: 5px;
+      }
+   }
+}

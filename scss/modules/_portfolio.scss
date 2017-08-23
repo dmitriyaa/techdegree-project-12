@@ -1,0 +1,64 @@
+.portfolio {
+   &__item {
+      margin-bottom: 1.5rem;
+   }
+
+   &__title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: .8rem;
+      padding-top: .8rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      color: $white;
+
+      @include mq(desktop) {
+         flex-direction: row;
+         align-items: center;
+      }
+
+      &--name {
+         display: block;
+         margin-top: 1rem;
+         font-size: 1.2rem;
+         @include mq(tablet) {
+            display: inline-block;
+            margin-top: 0;
+         }
+      }
+
+      &--source {
+         display: inline-block;
+         margin-right: .5rem;
+         padding: 4px 6px;
+         border-radius: 2px;
+         background: rgba(255,255,255,0.15);
+         text-transform: uppercase;
+         font-size: .8rem;
+         font-weight: $font-weight--bold;
+      }
+   }
+
+   &__description {
+      max-width: 750px;
+   }
+
+   &__links {
+      margin-top: 1rem;
+
+      @include mq(desktop) {
+         margin-top: 0;
+      }
+   }
+
+   &__link {
+      display: inline-block;
+      margin-left: 1rem;
+
+      &:hover {
+         color: rgba(242, 205, 94, 1);
+         transform: scale(1.1);
+      }
+   }
+}

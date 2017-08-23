@@ -1,0 +1,8 @@
+.logo {
+   opacity: .8;
+   max-width: 320px;
+
+   @include mq(tablet) {
+      max-width: 240px;
+   }
+}

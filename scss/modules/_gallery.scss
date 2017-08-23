@@ -1,0 +1,34 @@
+.gallery {
+
+   display: flex;
+   flex-wrap: wrap;
+   align-items: flex-start;
+
+   &__link {
+      // flex-grow: 1;
+      flex-basis: 450px;
+      margin: 1%;
+
+      &--mobile {
+         @extend .gallery__link;
+         flex-basis: 240px;
+         order: 1;
+
+         @include mq(tablet){
+            order: 0;
+         }
+      }
+   }
+
+   &__image {
+      width: 100%;
+      border-radius: 3px;
+      box-shadow: 3px 3px 5px rgba(0,0,0,0.15);
+      transition: all .3s ease;
+
+      &:hover {
+         transform: scale(1.02);
+         box-shadow: 3px 3px 65px rgba(0,0,0,0.85);
+      }
+   }
+}

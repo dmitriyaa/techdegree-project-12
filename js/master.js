@@ -1,0 +1,1 @@
+$('.cv__link').showHide();

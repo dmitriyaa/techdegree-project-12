@@ -1,0 +1,14 @@
+.about{
+   margin-bottom: 1.7rem;
+
+   @include mq(tablet) {
+      max-width: 450px;
+   }
+
+   &__header {
+      font-size: rem(30px);
+      font-weight: $font-weight--light;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
+      color: rgba(255, 255, 255, .8);
+   }
+}

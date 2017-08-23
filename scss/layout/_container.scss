@@ -1,0 +1,42 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   margin-top: rem(50px);
+   margin-bottom: rem(50px);
+
+   @include mq(tablet){
+      flex-direction: row;
+      width: 100vw;
+   }
+
+
+   &__col {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      // padding-bottom: .1rem;
+      width: 100%;
+
+      &--left {
+         @extend .container__col;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         @include mq(tablet){
+            flex-basis: 40%;
+            align-items: flex-end;
+            padding-right: 2rem;
+         }
+      }
+
+      &--right {
+         @extend .container__col;
+
+         @include mq(tablet){
+            flex-basis: 60%;
+            border-left: 2px solid rgba(255, 255, 255, .5);
+         }
+      }
+   }
+}
