@@ -9,6 +9,13 @@
    </head>
 
    <body>
+      <!-- displays loading screen if images are not loaded -->
+      <div id="loading" class="loading">
+         <div class="loading__curtain--left" id="curtain--left"></div>
+         <div class="loading__curtain--right" id="curtain--right"></div>
+         <div class="loading__float-container"><img class="loading__float" src="images/loading.svg" alt="Dmitriy's workshop logo"></div>
+      </div>
+
       <div class="container">
          <div class="container__col--left">
             <img class="logo" src="images/logo.svg" alt="Dmitriy's workshop logo">
@@ -90,11 +97,12 @@
             </ul>
          </div>
       </div>
+      <img id="heavyImg" src="images/background.gif">
+      <script type="text/javascript" src="js/loadingScreen.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script type="text/javascript" src="js/libs/easing_effect.js"></script>
       <script type="text/javascript" src="js/libs/showhide.js"></script>
       <script type="text/javascript" src="js/libs/ripple.js"></script>
-      <script type="text/javascript" src="js/master.js">
-      </script>
+      <script type="text/javascript" src="js/master.js"></script>
    </body>
 </html>

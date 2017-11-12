@@ -2,13 +2,6 @@
    box-sizing: border-box;
 }
 
-// html,body{
-//    -webkit-overflow-scrolling : touch !important;
-//    overflow: auto !important;
-//    height: 100% !important;
-//    margin: 0;
-// }
-
 body {
    display: flex;
    justify-content: center;
@@ -23,6 +16,10 @@ body {
    @include mq(tablet) {
       align-items: center;
    }
+}
+
+#heavyImg{
+   display: none;  
 }
 
 .container::before {
