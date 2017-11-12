@@ -6,7 +6,9 @@ window.addEventListener('load', function() {
    var loadingText = document.querySelector('.loading__float-container');
    var heavyImg = document.querySelector('#heavyImg');
 
-   if (!heavyImg.complete) {
+   if (heavyImg.complete) {
+      setTimeout(hideLoadingScreen, 1000);
+   } else {
       loading.style.display = 'block';
       heavyImg.addEventListener('load', function() {
          var currentTime = new Date().getTime();

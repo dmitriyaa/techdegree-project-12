@@ -419,9 +419,6 @@ body {
     body {
       align-items: center; } }
 
-#heavyImg {
-  display: none; }
-
 .container::before {
   content: "";
   display: block;
@@ -656,8 +653,10 @@ Modules
       transform: scale(1.02);
       box-shadow: 3px 3px 65px rgba(0, 0, 0, 0.85); }
 
+#heavyImg {
+  display: none; }
+
 .loading {
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
