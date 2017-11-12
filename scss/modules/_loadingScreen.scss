@@ -1,0 +1,89 @@
+.loading {
+   display: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 1000;
+   overflow-x: hidden;
+
+   &__curtain {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      transition: transform 1s;
+
+      &--left {
+         @extend .loading__curtain;
+         left: 0;
+         background: #141D23;
+
+         &-hide {
+            transform: translateX(-100%);
+         }
+      }
+
+      &--right {
+         @extend .loading__curtain;
+         right: 0;
+         background: #141D23;
+
+         &-hide {
+            transform: translateX(100%);
+         }
+      }
+   }
+
+   &__float-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1001;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1s;
+
+      &-hide {
+         opacity: 0;
+      }
+   }
+
+   &__float {
+      width: 320px;
+      animation-name: floating;
+      animation-duration: 3000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+   }
+}
+
+@-ms-keyframes floating {
+    from { -ms-transform: translate(0,  0px); }
+    25%  { -ms-transform: translate(14px, 14px); }
+    50%  { -ms-transform: translate(0, 17px); }
+    75%  { -ms-transform: translate(-10px, 12px); }
+    to   { -ms-transform: translate(0, 0px); }
+}
+@-moz-keyframes floating {
+    from { -moz-transform: translate(0,  0px); }
+    25%  { -moz-transform: translate(14px, 14px); }
+    50%  { -moz-transform: translate(0, 17px); }
+    75%  { -moz-transform: translate(-10px, 12px); }
+    to   { -moz-transform: translate(0, 0px); }
+}
+@-webkit-keyframes floating {
+    from { -webkit-transform: translate(0,  0px); }
+    25%  { -webkit-transform: translate(14px, 14px); }
+    50%  { -webkit-transform: translate(0, 17px); }
+    75%  { -webkit-transform: translate(-10px, 12px); }
+    to   { -webkit-transform: translate(0, 0px); }
+}
+@keyframes floating {
+   from { transform: translate(0,  0px); }
+   25%  { transform: translate(14px, 14px); }
+   50%  { transform: translate(0, 17px); }
+   75%  { transform: translate(-10px, 12px); }
+   to   { transform: translate(0, 0px); }
+}
