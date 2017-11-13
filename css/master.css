@@ -560,6 +560,8 @@ Modules
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
+  .cv__item--last {
+    margin-bottom: 1.7rem; }
 .cv__link, .cv__link--email {
   display: inline-block;
   width: 100%;
