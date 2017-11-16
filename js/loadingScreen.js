@@ -4,22 +4,6 @@ window.addEventListener('load', function() {
    var leftCurtain = document.querySelector('#curtain--left');
    var rightCurtain = document.querySelector('#curtain--right');
    var loadingText = document.querySelector('.loading__float-container');
-   var heavyImg = document.querySelector('#heavyImg');
-
-   if (heavyImg.complete) {
-      setTimeout(hideLoadingScreen, 1000);
-   } else {
-      loading.style.display = 'block';
-      heavyImg.addEventListener('load', function() {
-         var currentTime = new Date().getTime();
-         var timePassed = currentTime - windowLoadedTime;
-         if (tiemPassed < 1500) {
-            setTimeout(hideLoadingScreen, 1500 - timePassed);
-         } else {
-            hideLoadingScreen();
-         }
-      });
-   }
 
    function hideLoadingScreen() {
       loadingText.className += ' loading__float-container-hide';
@@ -31,4 +15,37 @@ window.addEventListener('load', function() {
          loading.style.display = 'none';
       }, 2000);
    }
+
+   function launchHiding() {
+      var currentTime = new Date().getTime();
+      var timePassed = currentTime - windowLoadedTime;
+      if (timePassed < 1500) {
+         setTimeout(hideLoadingScreen, 1500 - timePassed);
+      } else {
+         hideLoadingScreen();
+      }
+   }
+
+   function monitorImagesLoad() {
+      var images = document.querySelectorAll('img');
+      var imagesTotal = images.length;
+      var imagesLoaed = 0;
+      images.forEach(function(image) {
+         if (image.complete) {
+            imagesLoaed++;
+         } else {
+            image.addEventListener('load', function() {
+               if (imagesLoaed === imagesTotal) {
+                  imagesAreLoaded();
+               }
+            });
+         }
+      });
+      if (imagesLoaed === imagesTotal) {
+         launchHiding();
+      }
+   }
+
+   monitorImagesLoad();
+
 });
