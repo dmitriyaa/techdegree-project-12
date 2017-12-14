@@ -655,6 +655,52 @@ Modules
       transform: scale(1.02);
       box-shadow: 3px 3px 65px rgba(0, 0, 0, 0.85); }
 
+@media only screen and (min-width: 1024px) {
+  #blog {
+    padding-left: .5rem; } }
+
+.blog__post {
+  margin-bottom: 1.5rem; }
+.blog__link {
+  display: inline-block;
+  padding: .6rem 1.6rem;
+  border: 1.4px solid rgba(242, 205, 94, 0.8);
+  border-radius: 4px;
+  font-weight: bold; }
+  .blog__link:hover {
+    color: #f2cd5e;
+    border: 1.4px solid #f2cd5e; }
+
+.post__title {
+  margin-bottom: .8rem;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+.post__header {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .post__header--icon {
+    padding-left: .2rem;
+    color: rgba(255, 255, 255, 0.76);
+    transition: .5s; }
+  .post__header:hover .post__header--icon {
+    font-size: 1.6rem;
+    color: #f2cd5e; }
+.post__date {
+  font-size: .75rem; }
+.post__excerpt {
+  max-width: 640px; }
+  @media only screen and (min-width: 1024px) {
+    .post__excerpt {
+      padding-left: 1.8rem; } }
+.post__link--redirect {
+  font-size: .9rem; }
+
+.link-more {
+  display: none !important; }
+
 #heavyImg {
   display: none; }
 
