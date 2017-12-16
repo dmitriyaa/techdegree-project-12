@@ -20,7 +20,7 @@
       &--left {
          @extend .loading__curtain;
          left: 0;
-         background: #141D23;
+         background: #0D121A;
 
          &-hide {
             transform: translateX(-100%);
@@ -30,7 +30,7 @@
       &--right {
          @extend .loading__curtain;
          right: 0;
-         background: #141D23;
+         background: #0D121A;
 
          &-hide {
             transform: translateX(100%);
@@ -51,6 +51,19 @@
       &-hide {
          opacity: 0;
       }
+
+      &--404 {
+         @extend .loading__float-container;
+         flex-direction: column;
+      }
+   }
+
+   &__text {
+      font-size: 1.2rem;
+   }
+
+   &__link {
+      font-size: 1.2rem;
    }
 
    &__float {

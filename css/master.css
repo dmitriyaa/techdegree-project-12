@@ -719,15 +719,15 @@ Modules
     transition: transform 1s; }
     .loading__curtain--left {
       left: 0;
-      background: #141D23; }
+      background: #0D121A; }
       .loading__curtain--left-hide {
         transform: translateX(-100%); }
     .loading__curtain--right {
       right: 0;
-      background: #141D23; }
+      background: #0D121A; }
       .loading__curtain--right-hide {
         transform: translateX(100%); }
-  .loading__float-container {
+  .loading__float-container, .loading__float-container--404 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -738,6 +738,12 @@ Modules
     transition: opacity 1s; }
     .loading__float-container-hide {
       opacity: 0; }
+    .loading__float-container--404 {
+      flex-direction: column; }
+  .loading__text {
+    font-size: 1.2rem; }
+  .loading__link {
+    font-size: 1.2rem; }
   .loading__float {
     width: 320px;
     animation-name: floating;
